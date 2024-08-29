@@ -26,7 +26,7 @@ namespace UsuariosApi.Controllers
         public async Task<IActionResult> Login(LoginUsuarioDto dto)
         {
             var token = await _usuarioService.Login(dto); 
-            return Ok(token);
+            return Ok($"Token de acesso {token}");
         }
     }
 }
